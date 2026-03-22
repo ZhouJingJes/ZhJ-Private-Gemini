@@ -11,7 +11,7 @@ st.title("🤖 Gemini 2.0 Flash")
 if "messages" not in st.session_state:
     st.session_state.messages = []
     # 默认使用 2.0 Flash，额度高且速度快
-    st.session_state.chat = genai.GenerativeModel('gemini-2.0-flash').start_chat(history=[])
+    st.session_state.chat = genai.GenerativeModel('gemini-1.5-flash-8b').start_chat(history=[])
 
 for message in st.session_state.messages:
     with st.chat_message(message["role"]):
