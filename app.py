@@ -14,7 +14,7 @@ st.title("🤖 我的私有 Gemini")
 if "messages" not in st.session_state:
     st.session_state.messages = []
     # 使用 1.5-flash-8b，稳定性最高
-    st.session_state.chat = genai.GenerativeModel('gemini-1.5-flash-8b').start_chat(history=[])
+    st.session_state.chat = genai.GenerativeModel('gemini-1.5-flash').start_chat(history=[])
 
 # 显示历史消息
 for message in st.session_state.messages:
